@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Quicksand:wght@300..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #583634;
+    font-family: "Josefin Sans", sans-serif;
+    z-index: 0;
+}
+
+.container-wrapper{
+    background-color: #f9f4f0;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    padding: 30px 15px;
+    gap: 15px;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: center;
+    z-index: 0;
+}
+
+#Todo, #inProgress, #underReview, #finished{
+        width: calc(25% - 15px);
+}
+
+.container, .addBtn, h2{
+    width: 100%;
+    height: auto;
+    /* min-height: 370px; */
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.addBtn{
+    display: flex;
+    font-size: 18px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    min-height: 50px;
+    padding: 0 20px;
+    border: 0;
+    background-color: #583634;
+    border: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.addBtn:hover, button:hover{
+    background-color: #432827;
+}
+
+h2{
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    margin-bottom: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    min-height: 60px;
+    padding: 0 30px;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+
+span{
+    color: #f9f4f0;
+}
+
+@media (max-width: 600px) {
+    .container-wrapper{
+        padding: 25px 0;
+        align-items: center;
+        /* flex-direction: column; */
+    }
+    #Todo, #inProgress, #underReview, #finished{
+        width: calc(100% - 30px);
+    }
+    .addBtn{
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1030px) {
+  #Todo, #inProgress, #underReview, #finished {
+    flex: 0 0 48%; /* Allow space for gap/margin */
+  }
+}
+
+@media (min-width: 1031px) {
+  .container {
+    flex: 0 0 23%; /* 4 boxes with some gap */
+  }
+}
+
+
+.task{
+    background-color: #ffeddb;
+    padding: 15px;
+    border: 2px solid #a08164;
+    border-radius: 7px;
+    cursor: grab;
+    margin-bottom: 10px;
+}
+
+.task-title {
+    font-weight: 900;
+    color: black;
+    padding-bottom: 5px;
+    font-size: 17px;
+}
+
+.task-description{
+    color:rgb(57, 57, 57);
+    font-weight: 600;
+    font-size: 15px;
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+
+.task-tag{
+    font-weight: 500;
+    font-size: 13px;
+    color: white;
+    background-color: black;
+    padding: 6px 7px;
+    border-radius: 25px;
+}
+
+.task-deadline{
+    font-size: 14px;
+    color: rgb(57, 57, 57);
+}
+
+.task-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Low{
+    background-color: rgb(0, 192, 102);
+}
+
+.Medium{
+    background-color: orange;
+}
+
+.Urgent{
+    background-color: rgb(244, 69, 69);
+}
+
+.task.dragging {
+  opacity: 0.7;
+  transform: scale(1.05);
+  cursor: grabbing;
+}
+
+section .container.empty::before {
+  content: 'Drop tasks here';
+  color: #aaa;
+  font-style: italic;
+  display: block;
+  text-align: center;
+  padding: 30px 0;
+}
+
+input, select{
+  width: 100%;
+  padding: 0.775rem;
+  font-size: 0.8rem;
+  border: 1.5px solid #000;
+  border-radius: 0.4rem;
+  box-shadow: 2.5px 3px 0 #000;
+  outline: none;
+  transition: ease 0.25s;
+  margin-bottom: 25px;
+}
+
+button[type='submit']{
+    background-color: #583634;
+    color: white;
+    width: 100%;
+    padding: 0.775rem;
+    font-size: 0.8rem;
+    border: 1.5px solid #000;
+    border-radius: 0.4rem;
+    box-shadow: 2.5px 3px 0 #000;
+}
+
+.popup{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    border-radius: 10px;
+    padding: 30px 30px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    max-width: 350px;
+    z-index: 100;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+}
+
+#popupForm h3{
+    margin-bottom: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+.wrapper{
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+    background-color: #00000036;
+    overflow: hidden;
+}
