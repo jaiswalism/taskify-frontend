@@ -15,73 +15,34 @@
   </head>
   <body>
     <div class="container-wrapper">
-      <section class="task-column" aria-labelledby="todo-heading" id="Todo">
-        <h2 id="todo-heading">ToDo</h2>
-        <div class="container">
-          <!-- <div class="task" draggable="true">
-            <h4 class="task-title">Todo Title</h4>
-            <p class="task-description">Todo Description</p>
-            <div class="task-info">
-              <span class="task-tag medium">Medium</span>
-              <p class="task-deadline">
-                <i class="fa-regular fa-clock"></i> July 31, 2025
-              </p>
-            </div>
-          </div>
-          <div class="task" draggable="true">
-            <h4 class="task-title">Todo Title 2</h4>
-            <p class="task-description">Todo Description</p>
-            <div class="task-info">
-              <span class="task-tag low">Low</span>
-              <p class="task-deadline">
-                <i class="fa-regular fa-clock"></i> July 31, 2025
-              </p>
-            </div>
-          </div>
-          <div class="task" draggable="true">
-            <h4 class="task-title">Todo Title 3</h4>
-            <p class="task-description">Todo Description</p>
-            <div class="task-info">
-              <span class="task-tag urgent">Urgent</span>
-              <p class="task-deadline">
-                <i class="fa-regular fa-clock"></i> July 31, 2025
-              </p>
-            </div> 
-          </div> -->
-        </div>
+      <section class="task-column" aria-labelledby="todo" id="Todo">
+        <h2 id="todo-heading" class="h2-headings">ToDo</h2>
+        <div class="container" data-section="todo"></div>
+        <button class="addBtn">
+          <span>Add New</span><span style="font-size: 30px">+</span>
+        </button>
+      </section>
+      <section class="task-column" aria-labelledby="inProgress" id="inProgress">
+        <h2 id="inProgress-heading" class="h2-headings">In Progess</h2>
+        <div class="container" data-section="inProgress"></div>
         <button class="addBtn">
           <span>Add New</span><span style="font-size: 30px">+</span>
         </button>
       </section>
       <section
         class="task-column"
-        aria-labelledby="inProgress-heading"
-        id="inProgress"
-      >
-        <h2 id="inProgress-heading">In Progess</h2>
-        <div class="container"></div>
-        <button class="addBtn">
-          <span>Add New</span><span style="font-size: 30px">+</span>
-        </button>
-      </section>
-      <section
-        class="task-column"
-        aria-labelledby="underReview-heading"
+        aria-labelledby="underReview"
         id="underReview"
       >
-        <h2 id="underReview-heading">Under Review</h2>
-        <div class="container" ></div>
+        <h2 id="underReview-heading" class="h2-headings">Under Review</h2>
+        <div class="container" data-section="underReview"></div>
         <button class="addBtn">
           <span>Add New</span><span style="font-size: 30px">+</span>
         </button>
       </section>
-      <section
-        class="task-column"
-        aria-labelledby="finished-heading"
-        id="finished"
-      >
-        <h2 id="finished-heading">Finished</h2>
-        <div class="container"></div>
+      <section class="task-column" aria-labelledby="finished" id="finished">
+        <h2 id="finished-heading" class="h2-headings">Finished</h2>
+        <div class="container" data-section="finished"></div>
         <button class="addBtn">
           <span>Add New</span><span style="font-size: 30px">+</span>
         </button>
@@ -101,7 +62,9 @@
         <input type="date" id="dateInput" required />
         <button type="submit">Add Task</button>
       </form>
+	  
     </div>
-    <script src="index.js"></script>
+	<button id="logoutBtn">Logout</button>
+    <script src="./js/index.js"></script>
   </body>
 </html>

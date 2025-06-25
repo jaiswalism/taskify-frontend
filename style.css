@@ -26,7 +26,7 @@
         width: calc(25% - 15px);
 }
 
-.container, .addBtn, h2{
+.container, .addBtn, .h2-headings{
     width: 100%;
     height: auto;
     /* min-height: 370px; */
@@ -63,7 +63,7 @@
     background-color: #432827;
 }
 
-h2{
+.h2-headings{
     display: flex;
     font-size: 20px;
     justify-content: center;
@@ -73,6 +73,7 @@ h2{
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
     min-height: 60px;
+    max-height: 60px;
     padding: 0 30px;
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
@@ -85,7 +86,6 @@ span{
     .container-wrapper{
         padding: 25px 0;
         align-items: center;
-        /* flex-direction: column; */
     }
     #Todo, #inProgress, #underReview, #finished{
         width: calc(100% - 30px);
@@ -115,7 +115,8 @@ span{
     border: 2px solid #a08164;
     border-radius: 7px;
     cursor: grab;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
+    position: relative;
 }
 
 .task-title {
@@ -224,7 +225,7 @@ button[type='submit']{
 
 }
 
-#popupForm h3{
+#popupForm h3, #editPopupForm h3{
     margin-bottom: 15px;
 }
 
@@ -240,4 +241,96 @@ button[type='submit']{
     width: 100%;
     background-color: #00000036;
     overflow: hidden;
+}
+
+.authForm{
+    width: 100%;
+    height: 170px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-bottom: -5px;
+}
+
+@media (max-width: 600px) {
+    .login-screen{
+        width: 100%;
+    }
+}
+
+.authFormHeading{
+    width: 100%;
+    background-color: #fdfdfd;
+    align-items: center;
+}
+
+.authFormBtn{
+    justify-content: center;
+    font-size: 20px;
+}
+
+.deleteBtn, .editBtn{
+    border-radius: 8px;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    cursor: pointer;
+    padding: 3px;
+    border: 2px solid #a08164
+}
+
+.deleteBtn{
+    top: 5px;
+    right: 5px;
+}
+
+.editBtn{
+    top: 5px;
+    right: 33px;
+}
+
+.deleteBtn:hover{
+    background-color: rgb(244, 69, 69);
+}
+
+.deleteBtn:hover i, .editBtn:hover i{
+    color: white;
+}
+
+.redirect{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.redirect a:hover{
+    text-decoration: none;
+    font-style: italic;
+}
+
+#logoutBtn{
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    padding: 10px 20px;
+    border-radius: 9px;
+    font-weight: 800;
+    color: white;
+    background-color: #583634;
+}
+
+#logoutBtn:hover{
+    color: #583634;
+    background-color: white;
 }
