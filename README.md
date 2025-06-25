@@ -48,13 +48,11 @@ taskify-frontend/
 This frontend requires the [Taskify Backend](https://github.com/jaiswalism/taskify-backend) to be running.  
 All user authentication and task data are managed via the backend API.
 
-## 🔮 Upcoming Features
+## 🚧 Upcoming Features
 
-- [ ] Store tasks in a JSON file (simulate local data).
-- [ ] Save and load tasks using `localStorage`.
-- [ ] Connect to a backend database (e.g., Firebase, MongoDB).
-- [ ] Add user authentication and login system.
-- [ ] Edit and delete tasks.
+- **Due Date Reminders:** Implement basic reminders or visual indicators for upcoming or overdue tasks within the app.
+- **Dark Mode:** Provide an optional dark theme toggle for better accessibility and user preference.
+- **Accessibility Improvements:** Improve keyboard navigation and ensure screen reader compatibility.
 
 ## 📸 Preview
 
