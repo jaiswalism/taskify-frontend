@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Taskify</title>
+    <style>
+        .container-wrapper{
+            align-items: center;
+        }
+        section{
+            width: 25%;
+        }
+        .authForm{
+          height: 220px;
+        }
+        @media (max-width: 600px) {
+          section{
+            width: 90%;
+        }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container-wrapper">
+    <section id="signupSection">
+        <h2 class="h2-headings authFormHeading">Sign Up Form</h2>
+        <div class="signupForm authForm">
+            <input type="text" id="nameInput" placeholder="Enter your name..." required />
+            <input type="email" id="usernameInput" placeholder="Enter your username..." required />
+            <input type="password" id="passwordInput" placeholder="Enter your password..." required />
+        </div>
+        <button class="addBtn authFormBtn">
+          <span>Submit</span>
+        </button>
+        <div class="redirect"><p>Signed up?</p><a href="/login">Login</a></div>
+    </section>
+    
+    </div>
+    
+    <script src="./js/auth.js"></script>
+  </body>
+</html>
