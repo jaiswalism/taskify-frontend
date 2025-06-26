@@ -18,7 +18,7 @@ const submitTaskBtn = document.querySelector('#taskForm button')
 const taskForm = document.getElementById('taskForm')
 const logoutBtn = document.getElementById('logoutBtn')
 
-const apiUrl = "http://localhost:3000"
+const apiUrl = "https://taskify-backend-26et.onrender.com"
 
 let draggedTask = null;
 let targetCategory = null;
