@@ -1,5 +1,6 @@
 window.onload = checkAuth();
 
+const apiUrl = "http://localhost:3000"
 const signupBtn =document.querySelector('#signupSection button')
 const signinBtn =document.querySelector('#signinSection button')
 const signupNameInput = document.querySelector(".signupForm #nameInput")
@@ -13,7 +14,7 @@ if(signupBtn){
         const name = signupNameInput.value;
         const email = signupUsernameInput.value;
         const password = signupPasswordInput.value;
-        await fetch('http://localhost:3000/signup', {
+        await fetch(`${apiUrl}/signup`, {
             method: "POST",
             headers: {
             "Content-Type": "application/json"
@@ -31,7 +32,7 @@ if(signinBtn){
     signinBtn.addEventListener('click', async () => {
         const email = signinUsernameInput.value;
         const password = signinPasswordInput.value;
-        const response = await fetch('http://localhost:3000/login', {
+        const response = await fetch(`${apiUrl}/login`, {
             method: "POST",
             headers: {
             "Content-Type": "application/json"
@@ -53,7 +54,7 @@ async function checkAuth(){
     try{
         const token = localStorage.getItem("token")
 
-        await fetch('http://localhost:3000/', {
+        await fetch(`${apiUrl}`, {
             method: "GET",
             headers: {
                 token: token
