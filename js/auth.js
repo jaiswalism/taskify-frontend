@@ -24,7 +24,7 @@ if(signupBtn){
                 email: email,
                 password: password
             })
-        })
+        }).then(() => window.location.href="/")
     })
 }
 
