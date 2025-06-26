@@ -73,7 +73,7 @@ taskForm.addEventListener("submit", (e) => {
 
 logoutBtn.addEventListener("click", () => {
     localStorage.removeItem("token")
-    window.location.href = "/login"
+    window.location.href = "/login.html"
 })
 
 
