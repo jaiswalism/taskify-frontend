@@ -1,7 +1,7 @@
 window.onload = checkAuth();
 
-// const apiUrl = "https://taskify-backend-26et.onrender.com"
-const apiUrl = "http://localhost:3000"
+const apiUrl = "https://taskify-backend-26et.onrender.com"
+// const apiUrl = "http://localhost:3000"
 
 const signupBtn =document.querySelector('#signupSection button')
 const signinBtn =document.querySelector('#signinSection button')
