@@ -245,7 +245,7 @@ button[type='submit']{
 
 .authForm{
     width: 100%;
-    height: 170px;
+    height: 200px;
     margin: 0 auto;
     background-color: white;
     border-radius: 10px;
@@ -333,4 +333,20 @@ button[type='submit']{
 #logoutBtn:hover{
     color: #583634;
     background-color: white;
+}
+
+.postiveMessage{
+    margin-top: -5px;
+    text-align: center;
+    font-size: 12px;
+    color: green;
+    font-style: italic;
+}
+
+.negativeMessage{
+    margin-top: -5px;
+    text-align: center;
+    font-size: 12px;
+    color: rgb(255, 40, 40);
+    font-style: italic;
 }

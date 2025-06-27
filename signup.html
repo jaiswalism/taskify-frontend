@@ -19,8 +19,11 @@
         section{
             width: 25%;
         }
+        #passwordInput{
+          margin-bottom: 18px;
+        }
         .authForm{
-          height: 220px;
+          height: 260px;
         }
         @media (max-width: 600px) {
           section{
@@ -37,7 +40,9 @@
             <input type="text" id="nameInput" placeholder="Enter your name..." required />
             <input type="email" id="usernameInput" placeholder="Enter your username..." required />
             <input type="password" id="passwordInput" placeholder="Enter your password..." required />
+            <p id="message"></p>
         </div>
+        
         <button class="addBtn authFormBtn">
           <span>Submit</span>
         </button>
